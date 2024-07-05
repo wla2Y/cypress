@@ -13,23 +13,6 @@ describe('task4',()=>{
         cy.get("#qty").clear().type("3")
         cy.contains("Add to Cart").click()
 
-        
-
-
-
-
-
-
-
-
-
-
     })
-
-
-
-
-
-
 
 })
