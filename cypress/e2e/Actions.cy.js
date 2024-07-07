@@ -46,6 +46,7 @@ describe('Actions', ()=>{
       cy.visit('http://127.0.0.1:5500/cypress/index.html')
       
       cy.get("#country").select("Jordan") // use text element
+      cy.get("#country").select(["jordan","palestine"]) // select mor than on element will send by array index
        cy.get("#country").select("jordan_country")  // or use the value
        cy.get("country").select(1); // select by index 
     })

@@ -3,7 +3,7 @@
 describe('task4',()=>{
 
     it('test case ', ()=>{
-        cy.visit('https://magento.softwaretestingboard.com/')
+     cy.visit('https://magento.softwaretestingboard.com/')
 
        //cy.get("#search").type("shirt")
         cy.get("#search").type("shirt"+"{enter}")
