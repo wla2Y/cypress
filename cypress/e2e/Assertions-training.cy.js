@@ -76,23 +76,6 @@ describe('test cases ',()=>{
         cy.get(".product-item-details .item-options").should("contain","Orange")
 
 
-        
-
-
-
-
     })
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
