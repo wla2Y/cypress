@@ -23,35 +23,13 @@ describe('task5',()=>{
         cy.visit('/')
 
         cy.contains("Create an Account").click()
-        
+
         cy.get("#firstname").type("walaa");
         cy.get("#lastname").type("nazzal")
         cy.get("#email_address").type("walaanazzal@gmail.com")
         cy.get("#password").type("w123456789W")
         cy.get("#password-confirmation").type("w123456789W")
         cy.contains("span" ,"Create an Account").click()
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
     })
-
-
-
-
-
-
-
-
+    
 })
