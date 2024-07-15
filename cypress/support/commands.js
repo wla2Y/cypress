@@ -23,3 +23,34 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('clickLink', (label) => {
+  cy.get('a').contains(label).click()
+})
+
+
+Cypress.Commands.add('login',(email,password)=>{
+  cy.get("#email").type(email);
+  cy.get("#pass").type(password)
+  cy.get("#send2").click()
+
+
+})
+
+
+Cypress.Commands.add('LogIn',(email,password)=>{
+  cy.get("#Email").clear().type(email);
+  cy.get("#Password").clear().type(password)
+  cy.get("[type=submit]").click()
+
+
+})
+Cypress.Commands.add('loginNopcommerce',()=>{
+  // i used fixture instead of sending email and password from test file . 
+  cy.fixture("./example.json").then((data)=>{
+      cy.get("#Email").clear().type(data.email);
+      cy.get("#Password").clear().type(data.password);
+      cy.get(".login-button").click();
+  })
+})
+

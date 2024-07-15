@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cypress-file-upload": "^5.0.8"
+  },
+  "name": "cypress",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "devDependencies": {
+    "cypress": "^13.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
