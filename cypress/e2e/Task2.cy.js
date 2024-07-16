@@ -1,14 +1,9 @@
 
 //  <reference types="cypress" />
-
-
 // a task for a link  https://magento.softwaretestingboard.com/checkout/#shipping 
 // but a jacket in the catr and go to shipping address
-
 // 1. i made account ans i added a shirt 
-
-
-it("task",()=>{ 
+it("task2",()=>{ 
     cy.visit("/checkout/#shipping"); 
     /* ==== Generated with Cypress Studio ==== */ 
     cy.get('#search').clear('s');
@@ -21,23 +16,22 @@ it("task",()=>{
     cy.wait(3000); 
     cy.get('.showcart').click(); 
     cy.get('#top-cart-btn-checkout').click();
-    cy.wait(5000); /* ==== End Cypress Studio ==== */
+    cy.wait(5000); 
+    /* ==== End Cypress Studio ==== */
     
 
-cy.get('[ name = firstname]'); // an ATTRIBUTE  name="firstname" and iths uniqe
-cy.get('[name = lastname]');
-cy.get('[name = company]');
-
-cy.get("[name=telephone]");
-
-cy.get("[name = street[0] ]");
-cy.get("[name = street[2]]");
-cy.get("[name = [street[3]]");
-
-cy.get("#region_id");
-
-cy.get("#zip");
-
-
+  cy.get("[name=firstname]"); // an ATTRIBUTE  name="firstname" 
+  cy.get('[name=company]'); // attribute 
+    
+  // class and direct parent 
+  cy.get(".street .control > div:first-child"); 
+  cy.get(".street .control > div:nth-child(2)");
+  cy.get(".street .control > div:last-child");
+  // attribute 
+  cy.get("[name=city]");
+  cy.get("[name=region_id]");
+  cy.get("[name=postcode]");
+  cy.get("[name=country_id]");
+  cy.get("[name=telephone]");
 
 })
